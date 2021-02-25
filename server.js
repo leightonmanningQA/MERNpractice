@@ -18,12 +18,12 @@ const logger = (req, res, next) => {
 // this will print the date before each request.. 
 app.use(logger);
 
-//importing all of the routes in product.js
+//importing all of the routes in task.js
 const TaskRoute= require('./routes/tasks');
 
 
 
-//associates the product.js file with this one
+//associates the task.js file with this one
 app.use("/task", TaskRoute);
 
 //error handling
@@ -40,3 +40,5 @@ app.use((err,req,res,next)=>{
 const server = app.listen(5019, () => {
     console.log(`server has successfully started on port number: ${server.address().port}`);
 })
+
+module.exports = server;

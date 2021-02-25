@@ -5,7 +5,7 @@ const {Schema, model} = mongoose;
 const {DB_URL, DB_NAME} = require('../config/consts.json');
 
 const taskSchema = new Schema({
-    name: {type:String, required:true},
+    name: {type:String, required:true },  //, min length etc
     description: String,
     completed: Boolean
 });
